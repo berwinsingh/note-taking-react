@@ -1,0 +1,11 @@
+#create-new-note{
+   top: 30%;
+   left: 38%;
+}
+
+#close-icon{
+   position: relative;
+   left: 48%;
+   font-size: 1.75rem;
+   cursor: pointer;
+}

@@ -1,0 +1,77 @@
+#profile-picture{
+    background-image: url(/Profile.jpg);
+    background-size: cover;
+    background-position: 0.25px -5px;
+    cursor: pointer;
+}
+
+#search-icon{
+    font-size: 1.25rem;
+    background-color: #4f46e5;
+    color: white;
+    padding: 8px;
+    border-radius: 9999px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#search-icon:hover{
+    background-color: #4338ca;
+}
+
+.active{
+    color: #4338ca;
+}
+
+#notification-bell,#mail{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#notification-bell:hover,#mail:hover{
+    color: #4338ca;
+}
+
+#chevron-arrow{
+    font-size: 1.2rem;
+}
+
+.workspace-content:hover{
+    background-color: #4438ca4b;
+    border-radius: 2px;
+}
+
+#workspace-internal{
+    animation: view 1s ease-in both;
+}
+
+#content-header{
+    left: 100px;
+}
+
+#header{
+    border-bottom-left-radius: 5px;
+}
+
+@media screen and (min-width: 1200px) and (max-width:1500px) {
+    #content-header{
+        left: 125px;
+    }
+
+    #interactive-btns{
+        gap: .5rem;
+        padding-right: 8px;
+    }
+}
+
+@keyframes view {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
