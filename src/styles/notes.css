@@ -3,14 +3,7 @@
    left: 38%;
 }
 
-#close-icon{
-   position: relative;
-   left: 48%;
-   font-size: 1.75rem;
-   cursor: pointer;
-}
-
-#close-popup{
+#close-popup,#close-icon{
    position: absolute;
    font-size: 1.75rem;
    cursor: pointer;

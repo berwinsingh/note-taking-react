@@ -9,11 +9,20 @@ import ExpandNotes from "./components/expand-note";
 const Dashboard = ()=>{
     const [notes, setNotes] = useState(noteData);
     const [expandedNote, setExpandedNote] = useState("");
+    const [currentNoteId, setCurrentNoteId] = useState("");
+
+    const handleNoteUpdates = (updatedNote)=>{
+        const updatedNotes = notes.map(note => 
+            note.id === updatedNote.id ? {...note, ...updatedNote} : note
+        );
+        setNotes(updatedNotes);
+    }
 
     const expandNoteHandler = (e)=>{
         const expandedNote = document.getElementById("note-expanded");
-        expandedNote.classList.toggle("hidden");
-        setExpandedNote(e.target.textContent)
+        setCurrentNoteId(e.target.id);
+        expandedNote.classList.remove("hidden");
+        setExpandedNote(e.target.textContent);
     }
 
     return(
@@ -21,7 +30,7 @@ const Dashboard = ()=>{
             <DashboardHeader />
             <AddNewNote notes={notes} setNotes={setNotes}/>
             <MyDrafts notes={notes} expandEventHandler={expandNoteHandler}/>
-            <ExpandNotes notes={expandedNote}/>
+            <ExpandNotes notes={expandedNote} noteId={currentNoteId} onUpdateNote={handleNoteUpdates}/>
         </main>
     )
 }

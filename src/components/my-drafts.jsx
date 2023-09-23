@@ -13,7 +13,7 @@ const MyDrafts = ({ notes, expandEventHandler }) => {
               style={{ backgroundColor: note.color }}
               onClick={expandEventHandler}
             >
-              <p className="text-md leading-tight overflow-hidden select-none">
+              <p className="text-md leading-tight overflow-hidden select-none" id={note.id}>
                 {note.content}
               </p>
             </div>
