@@ -9,3 +9,16 @@
    font-size: 1.75rem;
    cursor: pointer;
 }
+
+#close-popup{
+   position: absolute;
+   font-size: 1.75rem;
+   cursor: pointer;
+   left: 93%;
+   top: 3%;
+}
+
+#note-expanded{
+   left: 40%;
+   top: 35%;
+}

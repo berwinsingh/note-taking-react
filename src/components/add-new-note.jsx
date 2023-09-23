@@ -4,14 +4,15 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import uniqid from "uniqid";
 
-const closePopup = () => {
-  const popup = document.getElementById("create-new-note");
-  popup.classList.add("hidden");
-};
 
 const AddNewNote = ({ notes, setNotes }) => {
   const [value, setValue] = useState("");
   const [backgroundColor, setBackgroundColor] = useState("");
+  
+  const closePopup = () => {
+    const popup = document.getElementById("create-new-note");
+    popup.classList.add("hidden");
+  };
 
   useEffect(() => {
     const colorList = [
@@ -55,10 +56,12 @@ const AddNewNote = ({ notes, setNotes }) => {
         newNoteHeading.textContent = "Add a new note";
         newNoteHeading.style.color = "black";
       }, 2000);
-    } else {
+    } 
+    else {
       const newNote = {
         id: uniqid(),
         content: extractedDeltaValue(JSON.stringify(value)),
+        deltaVal: value,
         color: backgroundColor,
       };
 

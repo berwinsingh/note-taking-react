@@ -1,10 +1,9 @@
-import Header from "./components/Header"
-import Dashboard from "./Dashboard"
-
+import Header from "./components/Header";
+import Dashboard from "./Dashboard";
 
 const addNoteDisplay = ()=>{
   const newNotePopup = document.getElementById("create-new-note");
-  newNotePopup.classList.toggle("hidden");
+  newNotePopup.classList.remove("hidden");
 }
 
 const App = ()=>{

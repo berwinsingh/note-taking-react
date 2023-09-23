@@ -79,11 +79,12 @@ const Header = (props) => {
           />
           <ion-icon name="search-outline" id="search-icon"></ion-icon>
         </div>
-        <div id="interactive-btns" className="flex gap-4 items-center">
+        <div id="interactive-btns" className="flex items-center">
           <button
             type="button"
             className="bg-indigo-600 text-white py-1 px-2 rounded-md drop-shadow-md flex items-center gap-1 hover:bg-indigo-700 select-none"
             onClick={props.newNoteHandler}
+            id="add-new-note-btn"
           >
             Add New Note <ion-icon name="add-outline"></ion-icon>
           </button>
@@ -100,6 +101,7 @@ const Header = (props) => {
 
 Header.propTypes = {
     newNoteHandler: PropTypes.func,
+    btnDisabledHandler: PropTypes.bool,
 }
 
 export default Header;
