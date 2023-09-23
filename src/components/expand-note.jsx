@@ -40,7 +40,7 @@ const ExpandNotes = ({ notes }) => {
           Edit Note
         </button>
       </div>
-    </>
+    </> 
   );
 };
 
